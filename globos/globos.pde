@@ -1,3 +1,4 @@
+PImage jaen;
 class Globo
 {
   float x, y,vx,vy;
@@ -21,6 +22,8 @@ class Globo
   {
       fill(c);
       ellipse(x,y,100,100);
+      imageMode(CENTER);
+      image(jaen,x,y,70,90);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
   }
   
@@ -32,12 +35,14 @@ ArrayList<Globo> globos;
 void setup()
 {
   size(640,480);
-  globos = new ArrayList<Globo>();  
+  globos = new ArrayList<Globo>();
+  jaen = loadImage("Desatranques_Jaen.jpg");
 }
 
 void draw()
 {
   background(0,255,20);
+  image(jaen,0,0);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
