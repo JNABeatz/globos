@@ -21,7 +21,8 @@ class Globo
   void dibujate()
   {
       fill(c);
-      ellipse(x,y,100,100);
+      rectMode(CENTER);
+      rect(x,y,100,100);
       imageMode(CENTER);
       image(jaen,x,y,70,90);
       triangle(x,y+50,x-10,y+60,x+10,y+60);
